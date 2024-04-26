@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entiquè - Your Destination for Antique Treasures</title>
+  <link rel="stylesheet" href="ENTIQUÈ.css"> <!-- Link your CSS file here -->
+  <style>
+    /* Set background image and apply blur effect */
+    body {
+        background-image: url('bck.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
+        background-size: cover; /* Cover the entire viewport */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Do not repeat the background image */
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevent horizontal scrollbars */
+        position: relative; /* Required for absolute positioning of bottom right options */
+    }
+
+    /* Apply blur effect */
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency to control the blur effect */
+        backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+        z-index: -1; /* Place the blurred layer behind other content */
+    }
+
+    /* Styles for bottom right options */
+    .bottom-right-options {
+        position: absolute;
+        bottom: 20px; /* Adjust the distance from the bottom */
+        right: 20px; /* Adjust the distance from the right */
+        text-align: right; /* Align text to the right */
+    }
+
+    /* Styles for option headings */
+    .option-heading {
+        color: aqua; /* Aqua color */
+        font-weight: bold; /* Bold font weight */
+        display: inline-block; /* Display headings in one line */
+        margin-right: 20px; /* Add spacing between headings */
+        font-size: 20px; /* Set font size */
+        cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+    /* Pink underline effect */
+    .option-heading:hover {
+        color: aqua;
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ENTIQUÈ</h1>
+    <nav>
+      <ul>
+        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="#" class="nav-link">Auction Archive</a></li>
+        <li><a href="#" class="nav-link">Media</a></li>
+        <li><a href="#" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+      <!-- Slide 1 -->
+      <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="brass vessel.jpg" style="width:100%">
+          <div class="text">brass vessel</div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img2.jpg" style="width:100%">
+          <div class="text">aesthetics</div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img3.jpg" style="width:100%">
+          <div class="text">paintings</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <!-- Dots/circles for navigation -->
+  <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- Bottom right options -->
+  <div class="bottom-right-options">
+      <a href="#" class="option-heading">Sell</a>
+      <a href="#" class="option-heading">Buy Treasure</a>
+  </div>
+  <div class="bottom-right-options">
+    <a href="sell.html" class="option-heading">Sell</a>
+    <a href="#" class="option-heading">Buy Treasure</a>
+</div>
+
+ 
+
+  <script src="ENTIQUÈ.js"></script> <!-- Link your JavaScript file here -->
+</body>
+</html>

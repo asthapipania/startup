@@ -1,0 +1,59 @@
+<!-- sell.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here -->
+  <style>
+    /* Apply blur effect to background image */
+    body {
+        background-image: url('img11.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
+        background-size: cover; /* Cover the entire viewport */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Do not repeat the background image */
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevent horizontal scrollbars */
+        position: relative; /* Required for absolute positioning of elements */
+    }
+
+    /* Apply blur effect */
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency to control the blur effect */
+        backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+        z-index: -1; /* Place the blurred layer behind other content */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sell</h1>
+    <a href="#" class="option-button" id="sellOnline">Sell Online</a>
+    <a href="#" class="option-button" id="sellOffline">Sell Offline</a>
+
+    <div id="onlineForm" style="display: none;">
+      <form id="addressForm">
+        <label for="address">Enter your address:</label>
+        <input type="text" id="address" name="address" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="pickupInfo" style="display: none;">
+      <h2>Pickup Information:</h2>
+      <p>Your treasure will be picked up by Raj Sharma after two days.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- Link your JavaScript file here -->
+</body>
+</html>

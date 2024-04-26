@@ -1,0 +1,183 @@
+/* Set black background for the entire page */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for header */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: aqua;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aqua;
+    position: relative;
+}
+
+/* Pink underline effect */
+nav ul li a:hover,
+nav ul li a:focus {
+    color: aqua;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: pink;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+    width: 100%;
+}
+
+/* Styles for slideshow */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Adjust image size and alignment */
+.mySlides img {
+    width: 100%; /* Make the images fill the width of the slideshow container */
+    max-height: 550px; /* Set a maximum height to prevent overly large images */
+    display: block;
+    margin: 0 auto; /* Center the images horizontally */
+}
+
+/* Next/previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next" button to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with slight transparency */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3, 2/3, etc.) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Active dot */
+.active, .dot:hover {
+    background-color: #717171;
+}
+/* Set background image and apply blur effect */
+body {
+    background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent horizontal scrollbars */
+}
+
+/* Apply blur effect */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency to control the blur effect */
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Place the blurred layer behind other content */
+}
+/* Styles for dropdown menu */
+#homePlace {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Styles for sell options */
+.sell-options {
+    margin-top: 10px;
+}
+
+.sell-options a {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+    
+}
+
+
